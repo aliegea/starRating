@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star rating</title>
+
+ <link rel="stylesheet" href="style.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/fdead9a902.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="star-rating" >
+        <input type="radio" name="star" id="star1" class="star">
+        <label for="star1" class="fas fa-star"></label>
+        <input type="radio" name="star" id="star2" class="star">
+        <label for="star2" class="fas fa-star"></label>
+        <input type="radio" name="star" id="star3" class="star">
+        <label for="star3" class="fas fa-star"></label>
+        <input type="radio" name="star" id="star4" class="star">
+        <label for="star4" class="fas fa-star"></label>
+        <input type="radio" name="star" id="star5" class="star">
+        <label for="star5" class="fas fa-star"></label>
+
+
+<script>
+    window.addEventListener("click", (e)=>{
+    let clik= e.target.tagName;
+    let stars=[...document.querySelectorAll('input')]
+    if(clik==="BODY"||clik==="HTML"){
+      for(star of stars){
+      star.checked = false;}
+        }
+    });
+</script>
+</body>
+</html>
